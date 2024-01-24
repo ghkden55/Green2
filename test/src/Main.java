@@ -1,6 +1,3 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -10,8 +7,12 @@ public class Main {
 
 
         // 가위바위보 게임
-        RockPaperScissors rps = new RockPaperScissors();
-        rps.startGame();
+//        RockPaperScissors rps = new RockPaperScissors();
+//        rps.startGame();
+
+        // 숫자 맞추기
+        GuessingTheNumber gtn = new GuessingTheNumber();
+        gtn.startGame();
 
     }
 }
