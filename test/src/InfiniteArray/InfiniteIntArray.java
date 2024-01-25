@@ -28,4 +28,8 @@ public class InfiniteIntArray {
     public void printArray() {
         System.out.println(Arrays.toString(arr));
     }
+
+    public void printIndexArray(int index) {
+        System.out.println(arr[index]);
+    }
 }
