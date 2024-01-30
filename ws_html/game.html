@@ -27,9 +27,14 @@
 
     <Script>
         var num;
+
         var result = document.getElementById("result");
         var img = document.getElementById("img");
 
+        var numAll = 0;
+        var numWin = 0;
+        var numDraw = 0;
+        var numLose = 0;
         var all = document.getElementById("all");
         var win = document.getElementById("win");
         var draw = document.getElementById("draw");
@@ -48,8 +53,6 @@
             } else if (num == 3) {
                 img.src = "images/paper.jpg"
                 printWin();
-                all += 1;
-
             }
         }
 
@@ -87,17 +90,29 @@
 
 
         function printWin() {
+            numAll += 1;
+            numWin += 1;
             result.innerText = "이겼습니다."
+            all.innerText = numAll;
+            win.innerText = numWin;
         }
 
 
         function printDraw() {
+            numAll += 1;
+            numDraw += 1;
             result.innerText = "비겼습니다."
+            all.innerText = numAll;
+            draw.innerText = numDraw
         }
 
 
         function printLose() {
+            numAll += 1;
+            numLose += 1;
             result.innerText = "졌습니다."
+            all.innerText = numAll;
+            lose.innerText = numLose;
         }
 
 
