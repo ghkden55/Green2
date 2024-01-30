@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+
+    <button onclick="scissors()">가위</button>
+    <button onclick="rock()">바위</button>
+    <button onclick="paper()">보</button>
+    <br/>
+    <br/>
+
+    <img id="img" src="">
+
+    <br/>
+    <br/>
+
+    <div id="result">결과</div>
+
+    <br/>
+    <br/>
+
+    <span id="all">0</span><span>전 </span><span id="win">0</span><span>승 </span><span id="draw">0</span><span>무 </span><span id="lose">0</span><span>패</span>
+
+    <Script>
+        var num;
+        var result = document.getElementById("result");
+        var img = document.getElementById("img");
+
+        var all = document.getElementById("all");
+        var win = document.getElementById("win");
+        var draw = document.getElementById("draw");
+        var lose = document.getElementById("lose");
+        
+
+        function scissors() {
+            num = Math.floor(Math.random()*3 + 1);
+        
+            if (num == 1) {
+                img.src = "images/scissors.jpg"
+                printDraw();
+            } else if (num == 2) {
+                img.src = "images/rock.jpg"
+                printLose();
+            } else if (num == 3) {
+                img.src = "images/paper.jpg"
+                printWin();
+                all += 1;
+
+            }
+        }
+
+
+        function rock() {
+            num = Math.floor(Math.random()*3 + 1);
+        
+            if (num == 1) {
+                img.src = "images/scissors.jpg"
+                printWin();
+            } else if (num == 2) {
+                img.src = "images/rock.jpg"
+                printDraw();
+            } else if (num == 3) {
+                img.src = "images/paper.jpg"
+                printLose();
+            }
+        }
+
+
+        function paper() {
+            num = Math.floor(Math.random()*3 + 1);
+        
+            if (num == 1) {
+                img.src = "images/scissors.jpg"
+                printLose();
+            } else if (num == 2) {
+                img.src = "images/rock.jpg"
+                printWin();
+            } else if (num == 3) {
+                img.src = "images/paper.jpg"
+                printDraw();
+            }
+        }
+
+
+        function printWin() {
+            result.innerText = "이겼습니다."
+        }
+
+
+        function printDraw() {
+            result.innerText = "비겼습니다."
+        }
+
+
+        function printLose() {
+            result.innerText = "졌습니다."
+        }
+
+
+    </Script>
+</body>
+</html>

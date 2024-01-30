@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">고양이</h1>
+    <img id="img" src="images/cat.jpg" width="500"> <br/>
+    <button onclick="dog()">강아지</button>
+    <button onclick="cat()">고양이</button>
+
+    <script>
+        var title = document.getElementById("title");
+        var img = document.getElementById("img");
+
+        function dog() {
+            title.innerText = "강아지"
+            img.src="images/dog.jpg"
+        }
+
+        function cat() {
+            title.innerText = "고양이"
+            img.src="images/cat.jpg"
+        }
+    </script>
+</body>
+</html>

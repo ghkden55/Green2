@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <h1 id="h" style="color:red;">HHH</h1>
+    <h2 id="j">HHH</h2>
+    <h3>HHH</h3>
+    <h4>HHH</h4>
+    <h5>HHH</h5>
+    <h6>HHH</h6>
+
+    <br/>
+
+    <button onclick="f()">run</button>
+    <button onclick="f2()">KKK</button>
+    <button onclick="f3()">HHH</button>
+
+    <br/>
+
+    <table border="1" width="400">
+        <tr>
+            <td rowspan="2" colspan="2">1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <table border="1" width="400">
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <form action="서버 주소" method="get"> <!--method는 작성 안 할 경우 get 방식이 default-->
+        책제목: <input type="text" name="title"/>
+        <input type="submit">
+    </form>
+
+    <script>
+        var h1txt = document.getElementById("h");
+
+        function f() {
+            alert("alert") // 경고창
+            console.log("Hello") // 콘솔창
+        }
+
+        function f2() {
+            h1txt.innerText = "KKK"
+        }
+
+        function f3() {
+            h1txt.innerText = "HHH"
+        }
+
+
+        var h2txt = document.querySelector("#j");
+    </script>
+</body>
+
+</html>

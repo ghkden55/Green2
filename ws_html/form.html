@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Test.html" method="get">
+        책 제목: <input type="text" name="title" value="제목을 입력하세요"/> <br/>
+
+        책 저자: <input type="text" name="author"/> <br/>
+
+        장르:
+        <input type="radio" name="genre" value="novel">소설
+        <input type="radio" name="genre" value="poetry">시
+        <input type="radio" name="genre" value="essay">에세이 <br/>
+
+        카테고리:
+        <input type="checkbox" name="cate" value="sf"> SF
+        <input type="checkbox" name="cate" value="mello"> 멜로
+        <input type="checkbox" name="cate" value="thriller"> 스릴러 <br/>
+
+        출판사: 
+        <select name="publisher">
+            <option>
+                A
+            </option>
+            <option>
+                B
+            </option>
+            <option>
+                C
+            </option>
+        </select> <br/>
+
+        내용: 
+        <textarea cols="50" rows="5" name="txt"></textarea> <br/>
+
+        아이디: 
+        <input type="text" placeholder="아이디를 입력하세요."> <br/>
+
+        비밀번호: 
+        <input type="password" placeholder="비밀번호를 입력하세요."> <br/>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
