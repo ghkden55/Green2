@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Result Page</title>
+</head>
+<body>
+
+result page
+<span>이름: </span><span id="name">   </span><span>나이: </span><span id="age">  </span>
+
+<script type="text/javascript">
+	val name = document.
+</script>
+
+</body>
+</html>

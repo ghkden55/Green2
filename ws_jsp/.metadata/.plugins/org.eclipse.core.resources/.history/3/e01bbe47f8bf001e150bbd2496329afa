@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home page</title>
+</head>
+<body>
+<h1>Welcome Home Page</h1>
+<hr>
+<div>
+<p>반갑습니다.</p>
+</div>
+<form>
+이름:
+<input name="name" type="text">
+나이:
+<input name="age" type="text">
+<submit>
+</form>
+</body>
+</html>

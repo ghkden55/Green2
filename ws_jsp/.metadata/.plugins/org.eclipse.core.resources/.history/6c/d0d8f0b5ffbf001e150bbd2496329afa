@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String name1 = request.getParameter("userName");
+	String age1 = request.getParameter("userAge");
+
+	pageContext.setAttribute("userName", name2);
+	pageContext.setAttribute("userAge", age2);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Result Page</title>
+</head>
+<body>
+
+<h1>Result Page</h1>
+<hr>
+
+이름 : ${param.userName } <br>
+나이 : ${param.userAge} <br>
+<hr>
+
+이름 : <%= name1 %> <br>
+나이 : <%= age1 %> <br>
+<hr>
+
+이름 : ${name2} <br>
+나이 : ${age2} <br>
+<hr>
+
+
+</body>
+</html>
