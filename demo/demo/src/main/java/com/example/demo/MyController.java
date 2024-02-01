@@ -2,23 +2,30 @@ package com.example.demo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MyController {
 
-    @RequestMapping("/")
-    public String home() {
-        return "home";
-    }
+   @RequestMapping("/")
+    public @ResponseBody String root() {
+       return "hello";
+   }
 
-    @RequestMapping("/result")
-    public String result(@RequestParam("userName") String userName2, @RequestParam("userAge") String userAge2, Model model) {
 
-        model.addAttribute("gender", "female");
-        System.out.println(userName2);
-        System.out.println(userAge2);
-        return "result";
+   @GetMapping("/main")
+    public String mainPage() {
+       System.out.println("main");
+       return "main";
+   }
+
+
+    @PostMapping("/proc1")
+    public String proc(@RequestParam String id, @RequestParam String pw, Model model) {
+
+        model.addAttribute("id", id);
+        model.addAttribute("pw", pw);
+
+        return "result1";
     }
 }
