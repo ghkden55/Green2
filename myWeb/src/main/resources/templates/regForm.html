@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reg Form</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <hr>
+    <form action="reg" method="post">
+        <input type="text" id="userId" name="id" placeholder="아이디를 입력하세요." required>
+        <input type="button" onclick="run()" value="아이디 중복확인" required>
+        <span id="demo">아이디 중복 체크</span> <br>
+        <input type="text" name="pw" placeholder="비밀번호를 입력하세요." required> <br>
+        <input type="text" name="name" placeholder="이름을 입력하세요." required> <br>
+        <input type="submit" value="등록">
+    </form>
+
+    <script>
+        const frm = document.querySelector("form");
+        const idtxt = document.querySelector("#userId");
+
+        function idCheck() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.responseText;
+            console.log("2");
+            }
+            xhttp.open("GET", "/idCheck?id=" + idtxt.value, true); //"GET" 방식으로, "어떤 페이지에" + 무엇을 보낼 것인지, "true = 동기 / false = 비동기"
+            xhttp.send(); // 바로 위 메서드를 서버에 전송
+        }
+
+        function run() {
+            console.log("1");
+            idCheck();
+            console.log("3");
+        }
+
+    </script>
+
+<a th:href="@{/home}">홈으로 가기</a>
+</body>
+</html>
